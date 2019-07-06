@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: Pull Request
+name: pull_request
 
 steps:
 - name: install
@@ -24,7 +24,7 @@ trigger:
 
 ---
 kind: pipeline
-name: Release
+name: release
 
 steps:
 - name: install
