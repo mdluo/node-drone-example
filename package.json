@@ -2,15 +2,23 @@
   "private": true,
   "name": "node-drone-boilerplate",
   "version": "1.0.0",
-  "scripts": {
-    "lint": "lint-staged",
-    "test:spec": "jest",
-    "test": "npm run test:spec"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "lint-staged",
+    "test:spec": "jest",
+    "test": "npm run test:spec"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
