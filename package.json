@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "node-boilerplate",
+  "name": "node-drone-boilerplate",
   "version": "1.0.0",
   "scripts": {
     "lint": "lint-staged",
