@@ -1,0 +1,47 @@
+---
+kind: pipeline
+name: Pull Request
+
+steps:
+- name: install
+  image: node
+  commands:
+  - npm ci
+
+- name: commitlint
+  image: node
+  commands:
+  - npx commitlint --from origin/master --to HEAD
+
+- name: test
+  image: node
+  commands:
+  - npm test
+
+trigger:
+  event:
+  - pull_request
+
+---
+kind: pipeline
+name: Release
+
+steps:
+- name: install
+  image: node
+  commands:
+  - npm ci
+
+- name: semantic-release
+  image: node
+  environment:
+    GITHUB_TOKEN:
+      from_secret: github_token
+  commands:
+    - npx semantic-release
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
