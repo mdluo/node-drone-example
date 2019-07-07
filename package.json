@@ -28,10 +28,12 @@
     "@semantic-release/npm": "^5.1.13",
     "babel-eslint": "^10.0.2",
     "commitizen": "^3.1.1",
+    "cypress": "^3.3.2",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-cypress": "^2.2.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -41,6 +43,7 @@
     "jest": "^24.8.0",
     "lint-staged": "^9.0.2",
     "prettier": "^1.18.2",
-    "semantic-release": "^15.13.18"
+    "semantic-release": "^15.13.18",
+    "wait-on": "^3.2.0"
   }
 }

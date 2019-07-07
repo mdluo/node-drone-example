@@ -1,0 +1,28 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - './.data/mongodb/db:/data/db'
+      - './.data/mongodb/configdb:/data/configdb'
+    ports:
+      - 27017:27017
+  admin-mongo:
+    image: mrvautin/adminmongo
+    depends_on:
+      - mongodb
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8082
+      CONN_NAME: mongodb
+      DB_HOST: mongodb
+      DB_PORT: 27017
+    ports:
+      - 8082:8082
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    volumes:
+      - './.data/rabbitmq:/var/lib/rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672

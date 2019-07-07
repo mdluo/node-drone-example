@@ -61,3 +61,8 @@ typings/
 .next
 
 .DS_Store
+
+/.data
+
+cypress/screenshots/*
+cypress/videos/*

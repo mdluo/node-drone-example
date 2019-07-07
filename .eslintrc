@@ -1,21 +1,24 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "standard",
-    "prettier",
-    "prettier/standard"
-  ],
-  "plugins": [
-    "prettier",
-    "standard"
-  ],
   "parserOptions": {
     "ecmaVersion": 2017 
   },
+  "extends": [
+    "standard",
+    "prettier",
+    "prettier/standard",
+    "plugin:cypress/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "standard",
+    "cypress"
+  ],
   "env": {
     "node": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "cypress/globals": true
   },
   "rules": {
     "prettier/prettier": 2
