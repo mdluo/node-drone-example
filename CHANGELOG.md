@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mdluo/node-drone-example/compare/v1.2.0...v1.3.0) (2019-07-07)
+
+
+### Features
+
+* add mongodb and user endpoints ([a3a4a56](https://github.com/mdluo/node-drone-example/commit/a3a4a56))
+
 # [1.2.0](https://github.com/mdluo/node-drone-example/compare/v1.1.0...v1.2.0) (2019-07-07)
 
 
