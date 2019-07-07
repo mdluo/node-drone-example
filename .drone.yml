@@ -45,6 +45,8 @@ name: release
 steps:
 - name: install
   image: node
+  environment:
+    CYPRESS_INSTALL_BINARY: 0
   commands:
   - npm ci
 
