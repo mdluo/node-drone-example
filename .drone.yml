@@ -2,6 +2,10 @@
 kind: pipeline
 name: pull_request
 
+services:
+- name: mongodb
+  image: mongo
+
 steps:
 - name: install
   image: node
@@ -23,6 +27,8 @@ steps:
 - name: web_server
   image: node
   detach: true
+  environment:
+    DB_HOST: mongodb
   commands:
   - npm start
 
