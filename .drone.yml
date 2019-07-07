@@ -5,6 +5,8 @@ name: pull_request
 steps:
 - name: install
   image: node
+  environments:
+    CYPRESS_CACHE_FOLDER: /root/.cache/Cypress
   commands:
   - npm ci
 
