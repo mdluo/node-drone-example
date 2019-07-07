@@ -5,7 +5,7 @@ name: pull_request
 steps:
 - name: install
   image: node
-  environments:
+  environment:
     CYPRESS_INSTALL_BINARY: 0
   commands:
   - npm ci
@@ -27,8 +27,8 @@ steps:
   - npm start
 
 - name: cypress
-  image: node
-  environments:
+  image: cypress/base
+  environment:
     CYPRESS_BASE_URL: http://web_server:3000
   commands:
   - npx cypress install
@@ -45,6 +45,8 @@ name: release
 steps:
 - name: install
   image: node
+  environment:
+    CYPRESS_INSTALL_BINARY: 0
   commands:
   - npm ci
 
