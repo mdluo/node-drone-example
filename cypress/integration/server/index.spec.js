@@ -7,11 +7,3 @@ context('GET /', () => {
     });
   });
 });
-
-context('GET /users', () => {
-  it('works', () => {
-    cy.request('/users').then(response => {
-      expect(response.body).to.have.length(5);
-    });
-  });
-});
